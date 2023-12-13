@@ -71,4 +71,26 @@ def pente(xA : float, yA : float, xB : float, yB : float) -> float:
     except:
         return "la droite est verticale"
 
-print(pente(2, 5, 4, 1))
+#print(pente(2, 5, 4, 1))
+
+####################################
+
+from math import sqrt
+
+def racines(a: float, b : float, c : float):
+    delta = b * b - 4 * a * c
+    if delta >= 0:
+        try:
+            x1 = (-b + sqrt(delta)) / (2 * a)
+            if delta > 0:
+                x2 = (-b - sqrt(delta)) / (2 * a)
+                print(f"Les racines sont {x1} et {x2}.")
+            else:
+                print(f"La racine est {x1}.")
+        except:
+            print(f"La racine est : {-c}")
+    else:
+        raise NameError("OSKOUR RACINES COMPLEXES")
+racines(1, 0, -1)
+racines(0, 1, -1)
+racines(1, 2, 3)
