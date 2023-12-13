@@ -61,4 +61,14 @@ def un_petit_jeu():
     else:
         print("Vous avez perdu.")    
 
-un_petit_jeu()
+#un_petit_jeu()
+
+####################################
+def pente(xA : float, yA : float, xB : float, yB : float) -> float:
+    try:
+        result = (yB - yA) / (xB - xA)
+        return result
+    except:
+        return "la droite est verticale"
+
+print(pente(2, 5, 4, 1))
