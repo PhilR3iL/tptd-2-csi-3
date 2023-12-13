@@ -21,4 +21,18 @@ def sinc(x : float) -> float:
     except ZeroDivisionError:
         return 1
 
-print(sinc(0))
+#print(sinc(0))
+
+#####################################
+
+def fichier_existe():
+    continuer = True
+    while continuer:
+        nom_fichier = input("Entrez un nom de fichier : ")
+        try:
+            open(nom_fichier)
+            continuer = False
+        except FileNotFoundError:
+            print("Le fichier n'existe pas.")
+
+fichier_existe()
