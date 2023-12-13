@@ -9,4 +9,16 @@ def age() -> int:
             print("Entrez un chiffre !")
     return age
 
-print("Vous avez ", age(), " ans.")
+# print("Vous avez ", age(), " ans.")
+
+#################################################
+
+from math import sin
+
+def sinc(x : float) -> float:
+    try:
+        return sin(x)/x
+    except ZeroDivisionError:
+        return 1
+
+print(sinc(0))
