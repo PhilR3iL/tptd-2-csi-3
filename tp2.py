@@ -35,4 +35,30 @@ def fichier_existe():
         except FileNotFoundError:
             print("Le fichier n'existe pas.")
 
-fichier_existe()
+#fichier_existe()
+
+#############################################
+
+import random
+import time
+
+def un_petit_jeu():
+    x = random.randint (0 ,100)
+    print("Vous devez arrêter le programme sur %d." % x)
+    print("Pour arrêter le programme, il faut faire Ctrl+C.")
+    print("Appuyer sur Entrée pour commencer...")
+    b = input()
+    i = 0
+    try:
+        while (i < 100) :
+            i+=1
+            print("%d\x0d" % i)
+            time.sleep(0.2)
+    except KeyboardInterrupt:
+        print("Le programme a été interrompu par l'utilisateur.")
+    if i == x:
+        print("Vous avez gagné.")
+    else:
+        print("Vous avez perdu.")    
+
+un_petit_jeu()
